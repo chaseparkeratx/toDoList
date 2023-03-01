@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./todo.js" defer></script>
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div class="buttonContainer1">
+      <button onclick="fetchTodos()">Fetch Todos</button>
+      <button onclick="logTodos()">Log Todos</button>
+      <button onclick="populateTodos()">Populate Todos</button>
+    </div>
+    <div class="buttonContainer2">
+      <label for="userId"></label>
+      FIND BY USER ID:
+      <input type="number" id="userId" min="1" max="10" />
+      <button onclick="repopulateTodos()">Repopulate</button>
+      <button onclick="removeTodos()">Remove Todos</button>
+      SHOW:
+      <select name="status" id="status">
+        <button onclick="completeTodos()">
+          <option value="complete">Completed</option>
+        </button>
+        <button onclick="incompleteTodos()">
+          <option value="incomplete">Not Completed</option>
+        </button>
+      </select>
+    </div>
+    <ol id="todo-list">
+      <!-- LIs will go here -->
+    </ol>
+  </body>
+</html>
